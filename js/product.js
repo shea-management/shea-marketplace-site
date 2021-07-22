@@ -75,7 +75,7 @@ function loadPage() {
                             row.classList.add('row');
                             if (item.id == itemID) { row.classList.add('highlight'); }
                             if (item.suggested == true) { row.classList.add('suggested'); }
-                            row.href = window.location.hostname + '/product.html?productid=' + productID + '&itemid=' + item.id;
+                            row.href = '../product.html?productid=' + productID + '&itemid=' + item.id;
                             
                             var img = document.createElement('img');
                             img.src = domain + item.thumbnail_URL;
