@@ -1,0 +1,309 @@
+/*
+
+    framework.css handles all common low-level elements, for example fonts, separators, text, etc.
+
+*/
+
+/* -- CUSTOM FONTS -- */
+@font-face {
+    font-family: "Eudoxus";
+    src: url("../content/fonts/EudoxusSans-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eudoxus";
+    src: url("../content/fonts/EudoxusSans-ExtraBold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* -- TEXT -- */
+h1 {
+    font-family: "Eudoxus", sans-serif;
+    font-weight: bold;
+
+    color: var(--secondary);
+}
+
+h2 {
+    font-family: "Eudoxus", sans-serif;
+    font-weight: bold;
+
+    color: var(--primary);
+}
+
+h3 {
+    font-family: "Eudoxus", sans-serif;
+    font-weight: bold;
+
+    color: var(--primary);
+}
+
+h4 {
+    font-family: "Eudoxus", sans-serif;
+    font-weight: normal;
+
+    color: var(--primary);
+}
+
+p, a, ul, ol, label {
+    font-family: "Eudoxus", sans-serif;
+    font-weight: normal;
+}
+
+
+/* -- SEPARATORS -- */
+.sep.vertical {
+    width: 10%;
+    height: 100%;
+
+    background-color: white;
+    border-left: 1px solid var(--primary);
+    display: inline-block;
+}
+.sep.horizontal {
+    height: 1%;
+    box-sizing: border-box;
+
+    border-bottom: 1px solid var(--primary);
+    margin: 0px 20px;
+}
+.sep.alt {
+    border-bottom: 1px solid var(--tertiary);
+}
+
+
+/* -- BUTTONS -- */
+
+/* Regular Buttons */
+.button {
+    padding: 10px 50px;
+    margin: 10px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: var(--cornerRounding);
+    background: none;
+    color: var(--primary);
+    cursor: pointer;
+
+    font-family: "Eudoxus", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+
+    transition-duration: var(--transitionDuration);
+}
+.button.icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Layout Variants  */
+.button.large {
+    padding: 12px 50px;
+}
+.button.tall {
+    padding: 15px 25px;
+}
+.button.icon.tall {
+    padding: 15px;
+}
+
+/* Colour Variants */
+.button.alt {
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+.button.secondary {
+    background: none;
+    color: var(--secondary);
+}
+.button.secondary.alt {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+.button.secondary.alt.dark {
+    color: var(--primary);
+}
+.button.highlight {
+    background-color: var(--primary25);
+}
+.button.alt.highlight {
+    background-color: var(--primaryLight);
+}
+.button.secondary.highlight {
+    background-color: var(--secondary25);
+}
+.button.secondary.alt.highlight {
+    background-color: var(--secondaryLight);
+}
+
+/* Hover Effects */
+.button:hover {
+    background-color: var(--primary25);
+}
+.button.alt:hover {
+    background-color: var(--primaryLight);
+}
+.button.secondary:hover {
+    background-color: var(--secondary25);
+}
+.button.secondary.alt:hover {
+    background-color: var(--secondaryLight);
+}
+
+/* Misc */
+.button:focus {
+    outline: none;
+    border: 1px solid var(--tertiary50);
+}
+.button.disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+}
+.button.mobile {
+    display: none;
+}
+
+
+/* -- CHECKBOXES & RADIOS -- */
+label {
+    color: var(--tertiary75);
+
+}
+input[type=radio], input[type=checkbox] {
+    margin: 5px 10px;
+}
+input:checked + label {
+    color: var(--tertiary);
+}
+
+
+/* -- CARDS -- */
+.card {
+    min-height: 300px;
+    box-sizing: border-box;
+    margin: 10px;
+
+    border-radius: var(--cornerRounding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    background-color: var(--tertiary25);
+}
+.card-left {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+
+    padding: 20px;
+
+    border-radius: var(--cornerRounding);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+.card-right {
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card-left > img {
+    width: 80px;
+    height: auto;
+    margin: 20px;
+}
+.card-left > h2 {
+    color: var(--tertiary);
+    text-align: center;
+} 
+
+.card-right > p {
+    color: var(--tertiary);
+    margin-bottom: 40px;
+}
+.card-right > .button {
+    width: 100%;
+    margin: 0px;
+}
+
+
+/* -- CONTAINERS -- */
+.container.vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* -- MISC -- */
+.responsive {
+    padding-left: 250px;
+    padding-right: 250px;
+    box-sizing: border-box;
+    transition: padding 0.2s;
+}
+.border {
+    border-bottom: 1px solid var(--tertiary);
+}
+
+
+/* -- MEDIA QUERIES -- */
+@media screen and (max-width: 1500px) {
+    .responsive {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .responsive {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .button.mobile {
+        display: inherit;
+    }
+
+    .button {
+        padding: 15px 50px;
+    }
+    .button.icon {
+        padding: 15px;
+    }
+}

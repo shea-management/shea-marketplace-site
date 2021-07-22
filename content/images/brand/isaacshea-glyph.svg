@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-3550,-3290)">
+        <g id="isaacshea-glyph" transform="matrix(0.240165,0,0,0.485437,2698.95,1653.59)">
+            <rect x="3543.62" y="3371" width="416.38" height="206" style="fill:none;"/>
+            <g transform="matrix(4.1638,0,0,2.06,-25582.2,2433.7)">
+                <path d="M7062.41,530L7027.59,530C7024.52,530 7021.75,528.15 7020.58,525.313C7019.4,522.476 7020.05,519.211 7022.22,517.04C7032.49,506.771 7046.77,492.493 7057.04,482.224C7059.21,480.053 7062.48,479.403 7065.31,480.578C7068.15,481.753 7070,484.522 7070,487.592C7070,499.253 7070,513.74 7070,522.408C7070,526.601 7066.6,530 7062.41,530ZM7030,480C7035.52,480 7040,484.481 7040,490C7040,495.519 7035.52,500 7030,500C7024.48,500 7020,495.519 7020,490C7020,484.481 7024.48,480 7030,480Z" style="fill:white;"/>
+            </g>
+        </g>
+    </g>
+</svg>

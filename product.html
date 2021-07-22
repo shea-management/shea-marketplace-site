@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Browser -->
+        <title>Made for You | Shea Marketplace</title>
+        <link rel="icon" type="image/png" href="./content/images/brand/favicon.png"/>
+
+        <!-- Social Media [META] -->
+        <meta property="og:title" content="Made for You | Shea Marketplace">
+        <meta property="og:description" content="Organise your business, plan your next holiday or beautify your phone - the Shea Marketplace is an excellent place to find digital products of all sorts, so have a look around!">
+        <meta property="og:image" content="https://sheamgt.com/content/images/brand/social-media-preview.png">
+        <meta property="og:url" content="https://marketplace.sheamgt.com/">
+        <meta property="og:locale" content="en_AU">
+        <meta property="og:site_name" content="Shea Marketplace">
+
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- JS -->
+        <script src="./js/global.js"></script>
+        <script src="./js/product.js"></script>
+
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="./css/framework.css">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/pages/product.css">
+
+        <link rel="stylesheet" href="./css/themes/default.css">
+    </head>
+
+    <body onload="loadPage()">  
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <a href="..">
+                <img class="nav-icon" src="./content/images/brand/favicon.png">
+            </a>
+
+            <div class="nav-buttons">
+                <a class="button icon" href=".."><span class="material-icons-round">home</span></a>
+                <a class="button icon" href="./cart.html"><span class="material-icons-round">shopping_cart</span></a>
+            </div>
+            <a class="button icon mobile" onclick="openNav()">
+                <span class="material-icons-round" href="javascript:void(0);">drag_handle</span>
+            </a>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <a class="button icon master" onclick="closeNav()">
+                <span class="material-icons-round" href="javascript:void(0);">close</span>
+            </a>
+
+            <div class="mobile-nav-buttons responsive" id="mobile-nav-buttons"></div>
+            </div>
+
+            <div class="mobile-nav-actions">
+                <a class="button icon"><span class="material-icons-round">home</span></a>
+                <a class="button icon" href="./cart.html"><span class="material-icons-round">shopping_cart</span></a>
+            </div>
+        </nav>
+
+        <!-- LOADING CONTENT -->
+        <span id="loading-content">
+            <div class="responsive empty-state">
+                <h1>Currently Loading...</h1>
+            </div>
+        </span>
+
+        <!-- FAILED TO LOAD -->
+        <div class="responsive empty-state loading-error" id="loading-error">
+            <h1>Something's up here</h1>
+            <p>
+                This should only occur when you've been playing around with the site in funky ways, so if you haven't, let us know.
+                <br> <br>
+                <b>Error 404</b>
+            </p>
+        </div>
+
+        <!-- LOADED CONTENT -->
+        <span id="loaded-content" style="display: none;">
+            <header class="header responsive product-view">
+
+                <div class="img-view">
+                    <img id='product-img' src="./content/images/pages/product-placeholder.png">
+                </div>
+
+                <div class="product-desc">
+                    <h1 id="product-name">Manage Your Books</h1>
+                    <h3 id="product-price">$14.99 AUD</h3>
+                    <p id="product-desc-verbose">
+                        Want to get on top of your books, but don't know where to start? Don't worry, we do! This simple guide helps you develop a good working habit to get your finances on track.
+                        <br> <br>
+                        This eBook is a quick-start guide to getting your business' books back on track, and making sure they'll stay there in the long term.
+                        <br> <br>
+                        Kylie Shea is a full-time bookkeeper and BAS agent based in Brisbane, Australia.
+                    </p>
+
+                    <div class="row">
+                        <a id="product-purchase" class="button secondary alt tall" onclick="purchaseNow()">Purchase Now</a>
+                        <a id="product-cart" class="button icon tall" onclick="addToCart()"><span class="material-icons-round">shopping_cart</span></a>
+                    </div>
+
+                    <div class="sep horizontal"></div>
+
+                    <div class="item-select" id="item-select">
+                        <div class="row">
+                            <img src="content/images/pages/product-placeholder.png">
+                            <h4>Product name</h4>
+                        </div>
+                        <div class="row">
+                            <img src="content/images/pages/product-placeholder.png">
+                            <h4>Product name</h4>
+                        </div>
+                    </div>
+
+                    <h2 id='item-desc-head'>About this Item</h2>
+                    <p id="item-desc"></p>
+
+                    <div class="row">
+                        <span class="material-icons-round">keyboard_arrow_down</span>
+                        <h4>Scroll down to explore</h4>
+                    </div>
+                </div>
+
+            </header>
+
+            <main class="main responsive">
+
+                <!-- PAGE CONTENT -->
+                <div class="content-section column-section">
+                    <div class="column-container">
+
+                        <!-- PRODUCT INFO -->
+                        <div class="column product-info" id="product-info">
+                            <h2>Product Information</h2>
+                        </div>
+
+                        <!-- MERCHANT INFO -->
+                        <div class="column">
+                            <h2>About the Merchant</h2>
+                            <div class="merchant-info">
+                                <img id="merchant-img" src="./content/images/pages/product-placeholder.png">
+                                <div class="merchant-info-right">
+                                    <p id="merchant-info">
+                                        <b>Kylie Shea</b> is a full-time bookkeeper, BAS agent and business consultant serving Australian businesses from Brisbane, QLD. She specialises in administration, management and marketing.
+                                    </p>
+                                    <a id="merchant-website" target="_blank" class="button secondary alt dark large">Visit Website</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                </div>
+            </main>
+        </span>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© Shea Management, 2021</p>
+        </footer>
+
+    </body>
+</html>

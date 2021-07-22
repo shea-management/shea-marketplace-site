@@ -1,0 +1,225 @@
+/* LOADING CONTENT */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: url(../../content/images/brand/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+}
+.loading-error {
+    display: none;
+}
+
+/* -- HEADER - PRODUCT VIEW -- */
+.product-view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background: url(../../content/images/brand/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    min-height: 100%;
+}
+
+.img-view {
+    width: 60%;
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-view img {
+    max-width: calc(100% - 100px);
+    height: auto;
+}
+
+.product-desc {
+    width: 40%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+.product-desc > h1, .product-desc > h3 {
+    margin: 5px 0px;
+}
+.product-desc > h2 {
+    margin-bottom: 0px;
+}
+.product-desc > .sep {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+}
+.row .button:not(.icon) {
+    margin: 0px;
+    flex-grow: 1;
+}
+.row h4 {
+    margin-left: 20px;
+}
+
+.item-select {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.item-select > .row {
+    padding: 5px;
+    box-sizing: border-box;
+    width: fit-content;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--cornerRounding);
+    transition-duration: var(--transitionDuration);
+}
+.item-select > .row.suggested {
+    background-color: var(--secondary75);
+}
+.item-select > .row.highlight {
+    background-color: var(--primary25);
+}
+.item-select > .row.suggested.highlight {
+    background-color: var(--secondary);
+}
+.item-select > .row:hover {
+    background-color: var(--primary50);
+}
+.item-select > .row.suggested:hover {
+    background-color: var(--secondary);
+}
+.item-select img {
+    width: 50px;
+    margin: 10px;
+}
+.item-select h4 {
+    color: var(--tertiary);
+    font-weight: bold;
+    margin-right: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+/* -- PAGE CONTENT -- */
+.column-container {
+    margin: 50px 0px;
+    align-items: flex-start;
+}
+.column {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* PRODUCT INFO */
+.column.product-info {
+    align-items: stretch;
+    margin-right: 50px;
+}
+.column.product-info > h2 {
+    text-align: left;
+    margin: 0px;
+}
+.column.product-info > .button {
+    margin: 5px 0px;
+}
+
+.info-row {
+    background-color: var(--tertiary25);
+    border-radius: var(--cornerRounding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    margin: 5px 0px;
+    padding: 0px 20px;
+}
+.info-row > h3 {
+    color: var(--tertiary);
+}
+.info-row > p {
+    color: var(--tertiary75);
+}
+
+/* MERCHANT INFO */
+.merchant-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: stretch;
+
+    box-sizing: border-box;
+}
+.merchant-info > img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.merchant-info-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.merchant-info-right  p {
+    color: var(--tertiary75);
+    margin-top: 0px;
+}
+.merchant-info-right > .button {
+    margin: 5px 0px;
+}
+
+
+/* -- MEDIA QUERIES -- */
+@media screen and (max-width: 1000px) {
+    .product-view {
+        flex-direction: column;
+    }
+
+    .img-view, .product-desc {
+        width: 100%;
+    }
+    .img-view { 
+        margin-top: 104px;
+    }
+}

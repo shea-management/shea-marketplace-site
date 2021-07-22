@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Browser -->
+        <title>Your Cart | Shea Marketplace</title>
+        <link rel="icon" type="image/png" href="./content/images/brand/favicon.png"/>
+
+        <!-- Social Media [META] -->
+        <meta property="og:title" content="Made for You | Shea Marketplace">
+        <meta property="og:description" content="Organise your business, plan your next holiday or beautify your phone - the Shea Marketplace is an excellent place to find digital products of all sorts, so have a look around!">
+        <meta property="og:image" content="https://sheamgt.com/content/images/brand/social-media-preview.png">
+        <meta property="og:url" content="https://marketplace.sheamgt.com/">
+        <meta property="og:locale" content="en_AU">
+        <meta property="og:site_name" content="Shea Marketplace">
+
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- JS -->
+        <script src="./js/global.js"></script>
+        <script src="./js/cart.js"></script>
+
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="./css/framework.css">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/pages/cart.css">
+
+        <link rel="stylesheet" href="./css/themes/default.css">
+    </head>
+
+    <body onload="loadPage()">
+
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <a href="..">
+                <img class="nav-icon" src="./content/images/brand/favicon-alt.png">
+            </a>
+
+            <div class="nav-buttons">
+                <a class="button alt icon" href=".."><span class="material-icons-round">home</span></a>
+                <a class="button alt icon highlight" href="./cart.html"><span class="material-icons-round">shopping_cart</span></a>
+            </div>
+            <a class="button icon mobile" onclick="openNav()">
+                <span class="material-icons-round" href="javascript:void(0);">drag_handle</span>
+            </a>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <a class="button icon master" onclick="closeNav()">
+                <span class="material-icons-round" href="javascript:void(0);">close</span>
+            </a>
+
+            <div class="mobile-nav-buttons responsive" id="mobile-nav-buttons"></div>
+            </div>
+
+            <div class="mobile-nav-actions">
+                <a class="button icon"><span class="material-icons-round">home</span></a>
+                <a class="button icon highlight" href="./cart.html"><span class="material-icons-round">shopping_cart</span></a>
+            </div>
+        </nav>
+
+        <!-- CART -->
+        <main class="main responsive">
+            <h1>Your cart</h1>
+            
+            <div class="cart-container">
+
+                <!-- CART CONTENTS -->
+                <div class="cart-contents" id="cart-contents">
+                    
+                    <!-- SAMPLE ITEM -->
+                    <div class="cart-item">
+                        <img src="./content/images/pages/product-placeholder.png">
+                        <div class="item-info">
+                            <h3>Manage Your Books</h3>
+                            <h4>$14.99 AUD</h4>
+                        </div>
+                        <button class="button icon"><span class="material-icons-round">delete</span></button>
+                    </div>
+
+                </div>
+
+                <!-- CART INFO -->
+                <div class="cart-info">
+                    <div class="horizontal-row">
+                        <h3>Total</h3>
+                        <h4 id="total">$27.48 AUD</h4>
+                    </div>
+
+                    <button class="button secondary tall alt dark" id="checkout-button" onclick="checkout()">Checkout</button>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© Shea Management, 2021</p>
+        </footer>
+    </body>
+</html>

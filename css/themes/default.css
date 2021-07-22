@@ -1,0 +1,21 @@
+:root {
+    --primary: #323B45;
+    --primary25: #323B4513;
+    --primary50: #323B4526;
+    --primary75: #323B4580;
+    --primaryLight: #454D57;
+
+    --secondary: #5FAEB6;
+    --secondary25: #5FAEB613;
+    --secondary50: #5FAEB626;
+    --secondary75: #5FAEB680;
+    --secondaryLight: #64BCC3;
+    
+    --tertiary: #FFFFFF;
+    --tertiary25: #FFFFFF13;
+    --tertiary50: #03030326;
+    --tertiary75: #FFFFFF80;
+
+    --cornerRounding: 5px;
+    --transitionDuration: 0.2s;
+}
