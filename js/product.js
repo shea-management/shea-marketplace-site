@@ -1,4 +1,5 @@
-const domain = 'http://localhost:4242/';
+// const domain = 'http://localhost:4242/';    // DEV
+const domain = 'https://shea-marketplace-server.herokuapp.com/'     // PRODUCTION
 var productID;
 var itemID;
 
